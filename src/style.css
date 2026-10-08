@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #0b0b0d;
+  color: #f4f4f0;
+  font-family: 'Space Grotesk', sans-serif;
+}
+main { max-width: 980px; margin: auto; padding: 80px 24px; }
+.hero { text-align: center; }
+.eyebrow { font-size: 12px; letter-spacing: .25em; opacity: .45; }
+h1 { font-size: clamp(64px, 13vw, 150px); line-height: .85; margin: 28px 0; letter-spacing: -.07em; }
+h1 span { color: #ff5500; }
+.hero > p { color: #999; font-size: 18px; }
+.modes { display: flex; gap: 8px; justify-content: center; margin: 42px auto 22px; flex-wrap: wrap; }
+.mode {
+  background: #151518; color: #aaa; border: 1px solid #28282d;
+  border-radius: 12px; padding: 12px 18px; cursor: pointer;
+}
+.mode strong, .mode small { display: block; }
+.mode small { margin-top: 4px; opacity: .55; }
+.mode.active { border-color: #ff5500; color: #fff; }
+.genre-picker { max-width: 800px; margin: 0 auto 26px; text-align: left; }
+.genre-picker-heading { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.genre-label { font-size: 11px; font-weight: 700; letter-spacing: .15em; color: #aaa; }
+.genre-count { color: #777; font-size: 12px; }
+.genre-clear { margin-left: auto; padding: 4px 0; border: 0; background: none; color: #ff8a55; font: inherit; font-size: 12px; cursor: pointer; }
+.genre-options { display: flex; flex-wrap: wrap; gap: 7px; }
+.genre-chip { padding: 8px 11px; border: 1px solid #303035; border-radius: 999px; background: #151518; color: #aaa; font: inherit; font-size: 13px; cursor: pointer; }
+.genre-chip[aria-pressed="true"] { border-color: #ff5500; background: #2a1a12; color: #fff; }
+.roll {
+  border: 0; border-radius: 999px; padding: 18px 42px;
+  font: inherit; font-weight: 700; font-size: 17px;
+  background: #ff5500; color: #fff; cursor: pointer;
+}
+.roll:disabled { opacity: .5; cursor: wait; }
+.result {
+  display: block;
+  margin-top: 70px; padding: 28px; background: #141416; border: 1px solid #27272b;
+  border-radius: 20px;
+}
+.tag { color: #ff5500; font-size: 11px; letter-spacing: .15em; font-weight: 700; }
+h2 { font-size: 34px; margin: 12px 0 4px; }
+.artist { color: #aaa; margin-top: 0; }
+.stats { color: #666; font-size: 13px; margin: 20px 0; }
+.sc-link { display: inline-block; margin-top: 14px; color: #ff8a55; text-decoration: none; }
+.empty { text-align: center; color: #555; margin-top: 80px; }
+.error { margin: 30px auto; max-width: 600px; padding: 14px; background: #241616; color: #ff9b9b; border-radius: 10px; }
+@media (max-width: 700px) {
+  main { padding-top: 45px; }
+}
